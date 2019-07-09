@@ -6,7 +6,7 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var rigger = require('gulp-rigger');
 var cssimport = require("gulp-cssimport");
-
+var imagemin = require('gulp-imagemin');
 
 gulp.task('html', function () {
     return gulp.src('app/**/*.html')
@@ -45,14 +45,25 @@ gulp.task('browserSync',  function() {                          // створю�
     })
 });
 
+gulp.task('image', function()
+{
+    gulp.src('app/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
+
 gulp.task('watch', function(){                                  // дивиться за змінами
     gulp.watch('app/**/*.html', gulp.series('html'));
     gulp.watch('app/scss/**/*.scss', gulp.series('sass'));      // шлях до паки з scss
     gulp.watch('app/js/**/*.js', gulp.series('jshint'));            // шдях до папки з js
+    gulp.watch('app/img/*', gulp.series('image'));
 });
 
 
-gulp.task('build', gulp.parallel('sass','html','jshint'));             // будує змінами
+gulp.task('build', gulp.parallel('sass','html','jshint','image'));             // будує змінами
 
 gulp.task('default', gulp.series(                               // паралельно запускає
     gulp.parallel('watch', 'build', 'browserSync')
