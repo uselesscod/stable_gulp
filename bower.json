@@ -1,0 +1,22 @@
+{
+  "name": "simple_gulp",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Your Name <you@example.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kostya-volinski/home",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "bootstrap": "^4.3.1",
+    "slick-carousel": "^1.8.1"
+  }
+}
