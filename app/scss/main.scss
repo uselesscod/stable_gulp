@@ -252,13 +252,16 @@ button {
 
 .default-btn {
   a {
+    min-width: 224px;
     font-family: 'Geometria-Bold';
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 2px;
-    padding: 20px 18px 26px 20px;
+    padding: 20px 0px 26px 0px;
     background-color: #ffffff;
     color: #1a1a1a;
+    text-transform: uppercase;
+    display: inline-block;
 
   }
 }
@@ -269,7 +272,7 @@ button {
 
 .slider-item {
   min-height: 500px;
-  background-image: url(../img/slider.jpg);
+
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -285,10 +288,9 @@ button {
   }
 
   .default-btn {
-    a {
-      position: relative;
-      bottom: -65px;
-    }
+
+  margin-top: 65px;
+
   }
 }
 
@@ -336,7 +338,7 @@ button {
 
 .our_prod {
   margin-top: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 
 .prod-item {
@@ -435,7 +437,7 @@ button {
 }
 .advantages
 {
-  background-color: #ffffff;
+  background-color: #f6f4f4;
   padding: 60px 0px;
   margin-bottom: 60px;
 }
@@ -447,7 +449,8 @@ button {
   text-align: center;
 .item
 {
-  margin:0px 15px;
+  padding-right:15px;
+  padding-left:13px;
   border-right: solid 1px #e6e6e6;
   &:last-child
   {
@@ -455,7 +458,7 @@ button {
   }
 }
   .title {
-    margin-top: 17px;
+    margin-top: 10px;
     margin-bottom: 15px;
     font-family: Geometria-Bold;
     letter-spacing: 2px;
@@ -562,3 +565,40 @@ button {
   text-align: center;
   color: #1a1a1a;
 }
+.black
+{
+  text-align: center;
+  a {
+    background-color: #1a1a1a;
+    color: #fff;
+    margin-bottom: 60px;
+
+  }
+}
+
+.about
+{
+  background-color: #f6f4f4;
+  .title {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    text-transform: uppercase;
+    font-family: 'Geometria-Bold';
+    font-size: 24px;
+    letter-spacing: 3px;
+    letter-spacing: normal;
+    text-align: center;
+  }
+  .container{
+    p{
+      line-height: 20px;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  }
+
+  }
+
+
+
+@import "media";
