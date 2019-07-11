@@ -26,7 +26,13 @@ gulp.task('sass', function(){
             stream: true
         }))
 });
-
+gulp.task('fonts',function () {
+    return gulp.src('app/fonts/*')
+        .pipe(gulp.dest('dist/fonts/'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
 
 gulp.task('jshint', function() {
         gulp.src('app/js/**/*.js')
@@ -60,10 +66,11 @@ gulp.task('watch', function(){                                  // дивить�
     gulp.watch('app/scss/**/*.scss', gulp.series('sass'));      // шлях до паки з scss
     gulp.watch('app/js/**/*.js', gulp.series('jshint'));            // шдях до папки з js
     gulp.watch('app/img/*', gulp.series('image'));
+    gulp.watch('app/fonts/*', gulp.series('fonts'));
 });
 
 
-gulp.task('build', gulp.parallel('sass','html','jshint','image'));             // будує змінами
+gulp.task('build', gulp.parallel('sass','html','jshint','image','fonts'));             // будує змінами
 
 gulp.task('default', gulp.series(                               // паралельно запускає
     gulp.parallel('watch', 'build', 'browserSync')
