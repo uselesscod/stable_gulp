@@ -1,0 +1,136 @@
+@font-face {
+	font-family: 'Geometria-Bold';
+	src: url('../fonts/Geometria-Bold.ttf') format('truetype')
+}
+@font-face {
+	font-family: 'Geometria-Medium';
+	src: url('../fonts/Geometria-Medium.ttf') format('truetype')
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria.ttf') format('truetype')
+}
+
+
+
+@font-face {
+	font-family: 'icomoon';
+	src:  url('../fonts/icomoon.eot?wieqop');
+	src:  url('../fonts/icomoon.eot?wieqop#iefix') format('embedded-opentype'),
+	url('../fonts/icomoon.ttf?wieqop') format('truetype'),
+	url('../fonts/icomoon.woff?wieqop') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+.icon-danger:before {
+	content: "\e922";
+}
+.icon-error-triangle:before {
+	content: "\e923";
+}
+.icon-telegram:before {
+	content: "\e920";
+}
+.icon-viber:before {
+	content: "\e921";
+}
+.icon-add-plus-button:before {
+	content: "\e91e";
+}
+.icon-minus:before {
+	content: "\e91f";
+}
+.icon-play-rounded-button:before {
+	content: "\e91d";
+	color: #fff;
+}
+.icon-google-plus:before {
+	content: "\e91c";
+}
+.icon-clock:before {
+	content: "\e91b";
+}
+.icon-checked:before {
+	content: "\e91a";
+}
+.icon-menu:before {
+	content: "\e918";
+}
+.icon-down-arrow-of-angle:before {
+	content: "\e900";
+}
+.icon-download:before {
+	content: "\e901";
+}
+.icon-email:before {
+	content: "\e902";
+}
+.icon-exchange:before {
+	content: "\e903";
+}
+.icon-facebook-logo:before {
+	content: "\e904";
+}
+.icon-handshake:before {
+	content: "\e905";
+}
+.icon-heart:before {
+	content: "\e906";
+}
+.icon-instagram-social-outlined-logo:before {
+	content: "\e907";
+}
+.icon-label:before {
+	content: "\e908";
+}
+.icon-like:before {
+	content: "\e909";
+}
+.icon-magnifying-glass:before {
+	content: "\e90a";
+}
+.icon-online-shop:before {
+	content: "\e90b";
+}
+.icon-phone-call:before {
+	content: "\e90c";
+}
+.icon-phone-call-1:before {
+	content: "\e90d";
+}
+.icon-ruler:before {
+	content: "\e90e";
+}
+.icon-share:before {
+	content: "\e90f";
+}
+.icon-shipped:before {
+	content: "\e910";
+}
+.icon-shopping-bag:before {
+	content: "\e911";
+}
+.icon-skype:before {
+	content: "\e912";
+}
+.icon-star:before {
+	content: "\e913";
+}
+.icon-twitter-social-outlined-logo:before {
+	content: "\e914";
+}
+.icon-user:before {
+	content: "\e915";
+}
+.icon-viber1:before {
+	content: "\e916";
+}
+.icon-youtube:before {
+	content: "\e917";
+}
+.icon-cancel:before {
+	content: "\e919";
+}
