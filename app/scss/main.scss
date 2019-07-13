@@ -250,6 +250,45 @@ button {
   color: #e83c4d;
 }
 
+
+.hidden_menu-woman{
+  position:absolute;
+  top:0;
+  left:0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  z-index: 10;
+  width: 100vw;
+  padding:60px 0px;
+  .hidden_item
+  {
+    padding-right: 60px;
+    border-right: 1px #e6e6e6 ;
+  }
+  .hidden_item:last-child{
+    padding-right: 0px;
+    border: none;
+  }
+  a{
+    color:#1a1a1a;
+  }
+  .hidden_text{
+    text-transform: uppercase;
+    font-family: 'Geometria-Bold';
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    padding-top:30px;
+  }
+  .hidden_icons
+  {
+    text-align: center;
+  }
+}
+
+
+
 .default-btn {
   a {
     min-width: 224px;
