@@ -11,7 +11,14 @@
 	font-family: 'Geometria';
 	src: url('../fonts/Geometria.ttf') format('truetype')
 }
-
+@font-face {
+	font-family: 'ProximaNova-Regular';
+	src: url('../fonts/Mark Simonson - Proxima Nova Condensed Regular.otf') format('truetype')
+}
+@font-face {
+	font-family: 'ProximaNova-Extrabold';
+	src: url('../fonts/Mark Simonson - Proxima Nova Condensed Extrabold.otf') format('truetype')
+}
 
 
 @font-face {

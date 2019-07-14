@@ -14,9 +14,24 @@ a {
 
 body {
   font-family: 'Geometria';
-
+  background-color: white;
   font-size: 14px;
 }
+  .overlay{
+    overflow: hidden;
+    &:before {
+      content: '';
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: rgba(26, 26, 26, 0.5);
+      z-index: 100;
+    }
+  }
+
 
 ul {
   padding-inline-start: 0;
@@ -29,6 +44,101 @@ li {
 
 }
 
+.hiden_menu {
+
+  overflow: auto;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100%;
+  background-color: #fff;
+}
+
+.active {
+  display: block !important;
+}
+
+.hiden_menu_iner {
+  width: 555px;
+  position: relative;
+
+  ul {
+    padding: 30px 0;
+  }
+
+  li {
+    padding: 30px 0px 30px 60px;
+
+    a {
+      display: block;
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: 3px;
+      color: #1a1a1a;
+      font-family: 'Geometria-Bold';
+      text-transform: uppercase;
+    }
+
+    .child {
+      display: none;
+    }
+
+    .item {
+      position: relative;
+
+      &:after {
+        content: '\e900';
+        text-align: center;
+        font-family: icomoon;
+        font-size: 6px;
+        position: absolute;
+        top: 1px;
+        right: 60px;
+      }
+
+    }
+
+    ul {
+      padding-bottom: 0px;
+
+      li {
+        padding: 0px;
+        padding-bottom: 15px;
+
+        a {
+          color: #999999;
+          text-transform: none;
+          font-size: 18px;
+          line-height: 18px;
+          letter-spacing: 0px;
+          font-family: 'Geometria';
+
+        }
+
+        &:last-child {
+          padding-bottom: 0px;
+        }
+      }
+
+    }
+  }
+
+  .close_btn {
+    &:after {
+      content: '\e919';
+      font-size: 15px;
+      color: #1a1a1a;
+      position: absolute;
+      font-family: icomoon;
+      right: 30px;
+      top: 30px;
+      cursor: pointer;
+    }
+
+  }
+}
 
 .container {
   width: 1170px;
@@ -225,9 +335,9 @@ button {
 .header_bottom {
 
   margin-top: 17px;
-  padding-bottom: 20px;
 
   a {
+    padding-bottom: 20px;
     display: inline-block;
     font-size: 16px;
     font-weight: bold;
@@ -251,43 +361,72 @@ button {
 }
 
 
-.hidden_menu-woman{
-  position:absolute;
-  top:0;
-  left:0;
+.hidden_menu {
+
+  position: absolute;
+  top: 400px;
+  left: 0;
   background-color: #fff;
-  display: flex;
-  justify-content: space-around;
   z-index: 10;
   width: 100vw;
-  padding:60px 0px;
-  .hidden_item
-  {
-    padding-right: 60px;
-    border-right: 1px #e6e6e6 ;
+  padding: 60px 0px;
+  display: none;
+
+  &:hover {
+    display: block;
   }
-  .hidden_item:last-child{
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  .hidden_item {
+    padding-right: 60px;
+    border-right: 1px #e6e6e6;
+  }
+
+  .hidden_item:last-child {
     padding-right: 0px;
     border: none;
   }
-  a{
-    color:#1a1a1a;
+
+  a {
+    color: #1a1a1a;
+
+    &:hover {
+      color: #e83c4d;
+    }
   }
-  .hidden_text{
+
+  .hidden_text {
     text-transform: uppercase;
     font-family: 'Geometria-Bold';
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 2px;
-    padding-top:30px;
+    padding-top: 30px;
   }
-  .hidden_icons
-  {
+
+  .hidden_icons {
     text-align: center;
   }
 }
 
-
+.header_bottom {
+  ul {
+    li {
+      a {
+        &:hover + {
+          .hidden_menu {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
 
 .default-btn {
   a {
@@ -424,7 +563,12 @@ button {
   }
 }
 
+.prod-items {
+  display: none;
+}
+
 .prod-slider {
+
   position: relative;
 
   .slick-dots li.slick-active button:before {
@@ -823,52 +967,59 @@ button {
       .social_link {
 
         margin-top: 20px;
-        a{
-          color:#1a1a1a;
-          &:before{
+
+        a {
+          color: #1a1a1a;
+
+          &:before {
             font-family: 'icomoon';
             font-size: 25px;
-            margin-right:20px;
+            margin-right: 20px;
 
 
           }
-          &:hover
-          {
-            color:#e83c4d;
+
+          &:hover {
+            color: #e83c4d;
           }
         }
-        .facebook{
+
+        .facebook {
           &:before {
             content: "\e904";
           }
         }
-        .instagram{
+
+        .instagram {
           &:before {
             content: "\e907";
           }
         }
-        .twitter{
+
+        .twitter {
           &:before {
             content: "\e914";
           }
         }
-        .youtube
-        {&:before {
-          content: "\e917";
-        }
+
+        .youtube {
+          &:before {
+            content: "\e917";
+          }
         }
       }
     }
 
   }
 }
-.footer_bot{
-  .container
-  {
+
+.footer_bot {
+  .container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     margin-top: 15px;
   }
 }
+
 @import "media";
