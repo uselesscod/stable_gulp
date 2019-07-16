@@ -59,7 +59,9 @@ li {
 .active {
   display: block !important;
 }
-
+.active::after{
+  transform: rotate(-180deg);
+}
 .hiden_menu_iner {
   width: 555px;
   position: relative;
@@ -287,7 +289,10 @@ header {
 .select {
   display: flex;
   align-items: center;
-
+position: relative;
+  a{
+    color:#1a1a1a;
+  }
   .currency {
     margin-left: 18px;
     padding-right: 15px;
@@ -304,7 +309,21 @@ header {
     }
 
   }
-
+  .currency_list{
+    display:none;
+  position: absolute;
+    left: 20px;
+    bottom: -45px;
+  }
+  .lang_list{
+    display: none;
+    position: absolute;
+    right: 5px;
+    bottom: -45px;
+  }
+  li{
+    display: block;
+  }
   .lang {
     position: relative;
     padding-right: 15px;
@@ -348,8 +367,6 @@ button {
     color: #1a1a1a;
 
   }
-
-
   ul {
     display: flex;
     justify-content: space-between;
@@ -441,6 +458,9 @@ button {
     text-transform: uppercase;
     display: inline-block;
 
+  }
+  a:hover{
+    background-color: #e83c4d;;
   }
 }
 
@@ -627,6 +647,11 @@ button {
   background-color: #f6f4f4;
   padding: 60px 0px;
   margin-bottom: 60px;
+  .container::before, .container::after {
+    content: '';
+    width: 100%;
+    order: 1;
+  }
 }
 
 .advantages-iner {
@@ -722,6 +747,7 @@ button {
 }
 
 .news_title {
+  display: block;
   font-size: 20px;
   font-weight: bold;
   font-style: normal;
@@ -729,10 +755,15 @@ button {
   letter-spacing: 1px;
   text-align: center;
   color: #1a1a1a;
-
+  &:hover{
+    color:#e83c4d;
+  }
   padding: 15px 30px;
 }
-
+.img-respons{
+  max-width: 100%;
+  height: auto;
+}
 .news_text {
   font-size: 14px;
   font-family: Geometria, sans-serif;
@@ -1022,4 +1053,33 @@ button {
   }
 }
 
+
+.header_bottom_menu_btn{
+  display: none;
+  font-family: Geometria-Bold;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  a{
+    display: block;
+    position: relative;
+    &:after{
+      content: '\e900';
+      text-align: center;
+      font-family: icomoon;
+      font-size: 6px;
+      position: absolute;
+      top: 5px;
+      right:0px;
+    }
+  }
+
+}
+.hiden_menu_iner li ul li a:hover{
+  color:#1a1a1a;
+}
+.hiden_menu_iner .close_btn:hover:after{
+  color: #e83c4d;
+}
 @import "media";
