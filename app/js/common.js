@@ -3,6 +3,40 @@ $(function () {
         arrows: false,
         dots: true
     });
+    $('.advantages-iner').slick(
+        {
+            nextArrow: '<button type="button" class="slick-next"></button>',
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            slidesToShow: 6,
+            arrows: false,
+            dots: false,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: false,
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        }
+    );
     $('.prod-iner').slick({
         nextArrow: '<button type="button" class="slick-next"></button>',
         prevArrow: '<button type="button" class="slick-prev"></button>',
