@@ -137,22 +137,6 @@ function tab() {
 
 }
 
-function header_menu() {
-    var hm = document.querySelectorAll(".hidden_menu");
-    var head = document.querySelector("header");
-    for (var i = 0; i <= hm.length; i++) {
-        hm[i].style.top = parseInt(head.clientHeight) + "px";
-    }
-
-    window.addEventListener("resize", function () {
-        for (var i = 0; i <= hm.length; i++) {
-            hm[i].style.top = parseInt(head.clientHeight) + "px";
-        }
-    });
-
-
-}
-
 function open_li() {
     console.log("open_li");
     var el = document.querySelector(".hiden_menu_iner");
@@ -258,7 +242,7 @@ function all() {
     tab();
     open_li();
     open_select();
-    header_menu();
+
 
 
 }
