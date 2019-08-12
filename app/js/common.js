@@ -70,7 +70,12 @@ $(function () {
         ]
     });
 
+    $('.kart-left_slider').slick({
+        arrows: false,
+        dots: false,
+        slidesToShow: 5,
 
+    });
 });
 
 function menu() {
